@@ -1,0 +1,45 @@
+.card {
+	flex-shrink: 0;
+	background-color: var(--tertiary-background-color);
+	width: 240px;
+	height: 160px;
+	border-radius: 4.69px;
+	overflow: hidden;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 13px;
+	text-overflow: ellipsis;
+	transition: transform 0.2s ease-in;
+}
+
+.card:hover {
+	transform: scale(1.08);
+	transition: transform 0.2s ease-in;
+}
+.card .upper-section {
+	display: flex;
+	gap: 22px;
+}
+.card .thumb {
+	width: 70px;
+	height: 70px;
+	border-radius: 5px;
+}
+.card .upper-section .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.card .lower-section {
+	display: flex;
+	flex-direction: column;
+	gap: 13px;
+}
+
+.card .textgroup {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+}

@@ -1,0 +1,11 @@
+.cardList {
+	background-color: var(--secondary-background-color);
+	border-radius: 15px;
+	display: flex;
+	gap: 20px;
+	padding: 20px;
+	overflow-x: auto;
+}
+.cardListHeader {
+	margin: 0 1rem;
+}
