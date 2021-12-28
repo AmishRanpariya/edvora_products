@@ -68,13 +68,13 @@ const App = () => {
 
 		if (isProductSelected && selectedProduct) {
 			newData = newData.filter(
-				(product) => product.product_name == selectedProduct
+				(product) => product.product_name === selectedProduct
 			);
 		}
 
 		if (isStateSelected && selectedState) {
 			newData = newData.filter(
-				(product) => product.address.state == selectedState
+				(product) => product.address.state === selectedState
 			);
 
 			//only show the cities which are in this state.
@@ -89,11 +89,19 @@ const App = () => {
 
 		if (isCitySelected && selectedCity) {
 			newData = newData.filter(
-				(product) => product.address.city == selectedCity
+				(product) => product.address.city === selectedCity
 			);
 		}
 		setRefinedData(newData);
-	}, [selectedCity, selectedProduct, selectedState]);
+	}, [
+		selectedCity,
+		selectedProduct,
+		selectedState,
+		isCitySelected,
+		isProductSelected,
+		isStateSelected,
+		rawData,
+	]);
 
 	const onProductSelected = (e) => {
 		if (e.target.value) {
